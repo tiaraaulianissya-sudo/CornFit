@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CornFit - Prediksi Hasil Panen</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Slideshow -->
+    <div class="background-slideshow">
+        <div class="bg-slide active" style="background-image: url('corn1.jpg');"></div>
+        <div class="bg-slide" style="background-image: url('corn2.jpg');"></div>
+        <div class="bg-slide" style="background-image: url('corn3.jpg');"></div>
+        <div class="bg-slide" style="background-image: url('corn4.jpg');"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-text">CornFit</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#information">Informasi</a></li>
+                <li><a href="#analytics">Analitik</a></li>
+                <li><a href="#model">Model</a></li>
+                <li><a href="#interactive">Simulasi</a></li>
+                <li><a href="#contact" class="btn-contact">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Analisis Prediksi Hasil Panen Jagung</h1>
+                <p class="hero-subtitle">Membandingkan Akurasi Model ARIMA berbasis DAX dengan Regresi Linear Tradisional</p>
+                <div class="hero-buttons">
+                    <a href="#analytics" class="btn-primary">Lihat Analisis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Section -->
+    <section id="information" class="information-section">
+        <div class="container">
+            <div class="info-header">
+                <h1 class="info-main-title">Informasi Umum Jagung</h1>
+                <p class="info-subtitle">Panduan Lengkap Mekanisme Panen dan Faktor Produksi Jagung</p>
+            </div>
+
+            <div class="info-content">
+                <!-- Section 1 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-number">01</span>
+                        <span class="accordion-title">Mekanisme Panen Jagung Secara Umum</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p class="intro-text">Panen jagung merupakan tahap krusial yang menentukan kualitas dan kuantitas hasil produksi. Proses ini memerlukan pemahaman mendalam tentang timing yang tepat dan teknik yang efektif untuk memaksimalkan hasil.</p>
+                            
+                            <div class="sub-section">
+                                <h3>Penentuan Waktu Panen</h3>
+                                <p>Jagung mencapai fase fisiologis matang dengan indikator spesifik yang perlu diperhatikan secara teliti:</p>
+                                <ul>
+                                    <li>Munculnya lapisan hitam (black layer) pada pangkal biji sebagai penanda matang fisiologis</li>
+                                    <li>Kadar air biji mencapai rentang 25-35% untuk panen pipilan optimal</li>
+                                    <li>Kelobot mengering dan berubah warna menjadi kecokelatan alami</li>
+                                </ul>
+                                
+                                <div class="highlight-box">
+                                    <strong>Pentingnya Ketepatan Waktu Panen:</strong>
+                                    <ul>
+                                        <li><strong>Panen Terlalu Cepat:</strong> Menghasilkan biji yang keriput, bobot rendah, dan nilai jual menurun</li>
+                                        <li><strong>Panen Terlalu Lambat:</strong> Meningkatkan risiko kehilangan hasil akibat serangan hama, penyakit jamur, dan kerontokan alami</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sub-section">
+                                <h3>Cara Melakukan Panen</h3>
+                                <p>Metode panen dapat disesuaikan dengan skala produksi dan ketersediaan teknologi:</p>
+                                <ul>
+                                    <li><strong>Manual:</strong> Pemetikan tongkol satu per satu dengan tangan, cocok untuk lahan kecil dan menengah</li>
+                                    <li><strong>Mekanis:</strong> Menggunakan combine harvester untuk efisiensi tinggi pada lahan luas</li>
+                                </ul>
+                                
+                                <p><strong>Tahapan Panen Standar:</strong></p>
+                                <ol>
+                                    <li>Pemotongan batang atau pemetikan langsung (tergantung metode)</li>
+                                    <li>Pengumpulan dan sortasi tongkol jagung berdasarkan kualitas</li>
+                                    <li>Pengelompokan berdasarkan varietas dan kondisi fisik</li>
+                                    <li>Pengangkutan ke tempat pengeringan dengan handling yang hati-hati</li>
+                                </ol>
+                            </div>
+
+                            <div class="sub-section">
+                                <h3>Perbedaan Varietas Jagung</h3>
+                                <div class="comparison-image-container">
+                                    <img src="IMG_3018[1].PNG" alt="Perbandingan Jagung Lokal dan Jagung Hibrida" class="fade-in-image">
+                                    <p class="image-caption">Perbandingan Visual: Jagung Lokal vs Jagung Hibrida</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-number">02</span>
+                        <span class="accordion-title">Musim Tanam dan Panen Jagung di Indonesia</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p class="intro-text">Indonesia dengan iklim tropisnya memiliki dua periode panen utama yang memberikan karakteristik berbeda terhadap produktivitas dan kualitas hasil panen jagung.</p>
+                            
+                            <div class="sub-section">
+                                <h4 class="season-title">Musim Hujan (Oktober - Maret)</h4>
+                                <ul>
+                                    <li>Ketersediaan air melimpah mendukung pertumbuhan vegetatif optimal</li>
+                                    <li>Risiko serangan penyakit dan proliferasi gulma meningkat signifikan</li>
+                                    <li>Kondisi tanah lembap ideal untuk tahap perkecambahan dan pertumbuhan awal</li>
+                                    <li>Memerlukan manajemen drainase yang baik untuk mencegah genangan</li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-section">
+                                <h4 class="season-title">Musim Kemarau (April - September)</h4>
+                                <ul>
+                                    <li>Intensitas cahaya matahari tinggi mengoptimalkan proses fotosintesis dan pengisian biji</li>
+                                    <li>Hasil panen cenderung lebih tinggi dengan kualitas lebih konsisten</li>
+                                    <li>Risiko kekeringan dapat diantisipasi melalui sistem irigasi terencana</li>
+                                    <li>Kondisi kering mengurangi tekanan penyakit dan hama</li>
+                                </ul>
+                            </div>
+
+                            <div class="note-box">
+                                <strong>Catatan Penting:</strong> Pemahaman siklus musim sangat krusial dalam analisis data panen karena menciptakan variabilitas hasil bulanan yang signifikan. Hal ini menjadi pertimbangan utama dalam pemodelan prediksi menggunakan ARIMA dan regresi linear.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-number">03</span>
+                        <span class="accordion-title">Kualitas Tanah sebagai Faktor Utama Produk Panen</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p class="intro-text">Kualitas tanah menjadi fondasi utama yang menentukan performa pertumbuhan dan produktivitas tanaman jagung. Tanah berkualitas tinggi memiliki karakteristik spesifik yang mendukung pertumbuhan optimal.</p>
+                            
+                            <div class="sub-section">
+                                <h3>Struktur Tanah Gembur</h3>
+                                <p>Struktur tanah yang loose dan well-aerated memfasilitasi perkembangan sistem perakaran yang kuat, meningkatkan efisiensi penyerapan air dan nutrisi esensial dari dalam tanah.</p>
+                            </div>
+
+                            <div class="sub-section">
+                                <h3>pH Optimal</h3>
+                                <p>Jagung tumbuh optimal pada pH tanah <strong>5.5 - 7.0</strong> yang memastikan ketersediaan nutrisi maksimal.</p>
+                                <ul>
+                                    <li><strong>pH Terlalu Asam:</strong> Unsur hara makro dan mikro terikat dalam bentuk tidak tersedia, menghambat pertumbuhan</li>
+                                    <li><strong>pH Terlalu Basa:</strong> Nutrisi mikro seperti Fe, Zn, dan Mn mengalami presipitasi dan sulit diserap akar</li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-section">
+                                <h3>Sistem Drainase Efektif</h3>
+                                <p>Jagung sangat sensitif terhadap genangan air. Tanah harus memiliki kemampuan drainase excellent untuk mengalirkan kelebihan air, terutama selama periode musim hujan yang intensif.</p>
+                            </div>
+
+                            <div class="sub-section">
+                                <h3>Kandungan Hara Seimbang</h3>
+                                <p>Ketersediaan unsur hara makro seperti Nitrogen (N), Fosfor (P), dan Kalium (K) dalam jumlah dan proporsi yang tepat sangat krusial untuk mendukung pertumbuhan vegetatif, pembungaan, dan pembentukan biji berkualitas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-number">04</span>
+                        <span class="accordion-title">Peran Zat Organik Tanah (Salah Satu Variabel PBI)</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p class="intro-text">Dalam penelitian dan pemodelan berbasis data PBI, kandungan bahan organik tanah menjadi salah satu variabel kunci yang memiliki pengaruh substansial terhadap produktivitas jagung secara keseluruhan.</p>
+                            
+                            <div class="sub-section">
+                                <h3>Definisi Zat Organik Tanah</h3>
+                                <p>Zat organik tanah merupakan komponen kompleks yang terdiri dari:</p>
+                                <ul>
+                                    <li>Residu tanaman dan hewan dalam berbagai tahap dekomposisi</li>
+                                    <li>Humus sebagai produk akhir dekomposisi yang stabil</li>
+                                    <li>Mikroorganisme hidup yang aktif dalam siklus nutrisi</li>
+                                    <li>Senyawa karbon kompleks yang memperkaya struktur tanah</li>
+                                </ul>
+                            </div>
+
+                            <div class="sub-section">
+                                <h3>Peranan Strategis Zat Organik</h3>
+                                <ol>
+                                    <li><strong>Peningkatan Kesuburan Tanah:</strong> Bahan organik bertindak sebagai reservoir nutrisi, menyediakan hara makro dan mikro secara bertahap sesuai kebutuhan tanaman</li>
+                                    <li><strong>Perbaikan Struktur Tanah:</strong> Meningkatkan agregasi tanah, menciptakan struktur yang lebih gembur, aerasi lebih baik, dan mudah diolah</li>
+                                    <li><strong>Kapasitas Retensi Air:</strong> Meningkatkan kemampuan tanah menahan air hingga 20 kali lipat beratnya, memberikan ketahanan terhadap kekeringan</li>
+                                    <li><strong>Aktivitas Mikrobiologi:</strong> Mendorong proliferasi mikroorganisme menguntungkan yang mengurai nutrisi kompleks menjadi bentuk tersedia</li>
+                                    <li><strong>Efisiensi Input:</strong> Mengurangi ketergantungan pada pupuk kimia sintetis, meningkatkan keberlanjutan dan efisiensi biaya produksi</li>
+                                </ol>
+                            </div>
+
+                            <div class="sub-section">
+                                <h3>Sumber Zat Organik</h3>
+                                <div class="highlight-box">
+                                    <ul>
+                                        <li><strong>Kompos:</strong> Hasil dekomposisi bahan organik terkontrol</li>
+                                        <li><strong>Pupuk Kandang:</strong> Dari kotoran ternak yang telah matang</li>
+                                        <li><strong>Biochar:</strong> Arang hayati dengan stabilitas tinggi</li>
+                                        <li><strong>Mulsa Organik:</strong> Sisa tanaman sebagai penutup tanah</li>
+                                        <li><strong>Seresah Daun:</strong> Bahan organik alami dari vegetasi</li>
+                                        <li><strong>Humus:</strong> Produk akhir dekomposisi yang stabil</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-number">05</span>
+                        <span class="accordion-title">Kaitan dengan Variabel PBI (Penelitian / Aplikasi Data)</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p class="intro-text">Pemodelan prediksi hasil panen mengintegrasikan berbagai variabel yang saling berinteraksi secara kompleks untuk menghasilkan estimasi akurat.</p>
+                            
+                            <div class="variable-grid">
+                                <div class="variable-card">
+                                    <h4>Hasil Panen Bulanan</h4>
+                                    <p>Data time-series produksi aktual</p>
+                                </div>
+                                <div class="variable-card">
+                                    <h4>Jenis Musim Panen</h4>
+                                    <p>Hujan vs Kemarau dengan karakteristik berbeda</p>
+                                </div>
+                                <div class="variable-card">
+                                    <h4>Kualitas Tanah</h4>
+                                    <p>Struktur, pH, dan kandungan hara</p>
+                                </div>
+                                <div class="variable-card">
+                                    <h4>Kandungan Zat Organik</h4>
+                                    <p>Persentase bahan organik dalam tanah</p>
+                                </div>
+                                <div class="variable-card">
+                                    <h4>Curah Hujan</h4>
+                                    <p>Distribusi dan intensitas presipitasi</p>
+                                </div>
+                                <div class="variable-card">
+                                    <h4>Suhu Rata-rata</h4>
+                                    <p>Kondisi termal lingkungan tumbuh</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Model Comparison Section -->
+    <section id="analytics" class="model-comparison">
+        <div class="container">
+            <h2 class="section-title">Perbandingan Model Prediksi</h2>
+            <p class="section-subtitle">Evaluasi komprehensif terhadap dua pendekatan forecasting hasil panen</p>
+            
+            <div class="comparison-grid">
+                <div class="model-card arima">
+                    <h3>ARIMA (DAX)</h3>
+                    <p class="model-desc">AutoRegressive Integrated Moving Average dengan implementasi DAX di Power BI</p>
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="metric-label">R² Score</span>
+                            <span class="metric-value">0.85-0.92</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">MAPE</span>
+                            <span class="metric-value">5-8%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Kecepatan</span>
+                            <span class="metric-value">Real-time</span>
+                        </div>
+                    </div>
+                    <div class="advantages">
+                        <h4>Keunggulan:</h4>
+                        <ul>
+                            <li>Menangkap pola musiman dengan baik</li>
+                            <li>Adaptif terhadap tren jangka pendek</li>
+                            <li>Integrasi seamless dengan Power BI</li>
+                            <li>Update otomatis saat data berubah</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="model-card regression">
+                    <h3>Regresi Linear</h3>
+                    <p class="model-desc">Pendekatan statistik klasik untuk prediksi time series</p>
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="metric-label">R² Score</span>
+                            <span class="metric-value">0.75-0.82</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">MAPE</span>
+                            <span class="metric-value">8-12%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Kecepatan</span>
+                            <span class="metric-value">Cepat</span>
+                        </div>
+                    </div>
+                    <div class="advantages">
+                        <h4>Keunggulan:</h4>
+                        <ul>
+                            <li>Interpretasi hasil yang mudah</li>
+                            <li>Komputasi ringan dan cepat</li>
+                            <li>Stabil untuk tren linear</li>
+                            <li>Basis matematis yang kuat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Findings -->
+            <div class="key-findings">
+                <h3>Temuan Utama</h3>
+                <div class="findings-grid">
+                    <div class="finding-card">
+                        <h4>Akurasi Superior</h4>
+                        <p>ARIMA berbasis DAX menunjukkan peningkatan akurasi 10-15% dibanding regresi linear, terutama pada data dengan pola musiman kuat</p>
+                    </div>
+                    <div class="finding-card">
+                        <h4>Fleksibilitas Model</h4>
+                        <p>ARIMA lebih adaptif terhadap perubahan pola, sementara regresi lebih cocok untuk tren yang stabil dan linear</p>
+                    </div>
+                    <div class="finding-card">
+                        <h4>Implementasi Praktis</h4>
+                        <p>Integrasi DAX memungkinkan update prediksi secara real-time tanpa perlu re-training model eksternal</p>
+                    </div>
+                    <div class="finding-card">
+                        <h4>Residual Analysis</h4>
+                        <p>Distribusi residual ARIMA lebih terpusat di sekitar nol, mengindikasikan fitting yang lebih baik</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Insights Section -->
+    <section id="model" class="data-insights">
+        <div class="container">
+            <h2 class="section-title">Insights dari Data</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-number">5.75</div>
+                    <div class="insight-label">Rata-rata Hasil Panen (Ton/Ha)</div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">5K+</div>
+                    <div class="insight-label">Total Lahan Teranalisis</div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">-2.8%</div>
+                    <div class="insight-label">Tren Penurunan (2021-2025)</div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">4-7</div>
+                    <div class="insight-label">Range Hasil Optimal (Ton/Ha)</div>
+                </div>
+            </div>
+
+            <!-- Analysis Points -->
+            <div class="analysis-points">
+                <div class="point">
+                    <div class="point-content">
+                        <h4>Kualitas Tanah Berpengaruh Signifikan</h4>
+                        <p>Analisis menunjukkan konsistensi hasil panen di berbagai kategori kualitas tanah (Baik, Kurang, Buruk, Sedang) dengan rata-rata ~5.75 ton/ha</p>
+                    </div>
+                </div>
+                <div class="point">
+                    <div class="point-content">
+                        <h4>Pola Musiman Terdeteksi</h4>
+                        <p>Model ARIMA berhasil menangkap fluktuasi musiman yang tidak terdeteksi oleh regresi linear sederhana</p>
+                    </div>
+                </div>
+                <div class="point">
+                    <div class="point-content">
+                        <h4>Tren Menurun Memerlukan Perhatian</h4>
+                        <p>Data historis menunjukkan penurunan hasil panen dari ~5.85 (2022) ke ~5.65 ton/ha (2025), menandakan perlunya intervensi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Dashboard Section -->
+    <section id="interactive" class="interactive-section">
+        <div class="container">
+            <h2 class="section-title">Simulasi</h2>
+            <p class="section-subtitle">Simulasi prediksi hasil panen dengan parameter kustom</p>
+
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <div class="control-panel-header">
+                    <h3>Parameter Prediksi</h3>
+                    <p>Sesuaikan parameter untuk melihat prediksi hasil panen yang akurat</p>
+                </div>
+
+                <div class="control-grid">
+                    <div class="control-group">
+                        <label for="soilQuality">
+                            <span class="label-text">Kualitas Tanah</span>
+                        </label>
+                        <div class="select-wrapper">
+                            <select id="soilQuality">
+                                <option value="baik">Baik - Subur & Nutrisi Tinggi</option>
+                                <option value="sedang" selected>Sedang - Kondisi Normal</option>
+                                <option value="kurang">Kurang - Perlu Pemupukan</option>
+                                <option value="buruk">Buruk - Kualitas Rendah</option>
+                            </select>
+                        </div>
+                        <small class="helper-text">Pilih kondisi tanah pada lahan Anda</small>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="variety">
+                            <span class="label-text">Varietas Jagung</span>
+                        </label>
+                        <div class="select-wrapper">
+                            <select id="variety">
+                                <option value="lokal">Varietas Lokal - Adaptif Lokal</option>
+                                <option value="hibrida" selected>Varietas Hibrida - Hasil Tinggi</option>
+                            </select>
+                        </div>
+                        <small class="helper-text">Jenis bibit yang akan ditanam</small>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="harvestMonth">
+                            <span class="label-text">Bulan Panen</span>
+                        </label>
+                        <div class="select-wrapper">
+                            <select id="harvestMonth">
+                                <option value="1">Januari - Musim Hujan</option>
+                                <option value="2">Februari - Musim Hujan</option>
+                                <option value="3">Maret - Peralihan</option>
+                                <option value="4">April - Mulai Kering</option>
+                                <option value="5" selected>Mei - Musim Kemarau</option>
+                                <option value="6">Juni - Musim Kemarau</option>
+                                <option value="7">Juli - Puncak Kemarau</option>
+                                <option value="8">Agustus - Puncak Kemarau</option>
+                                <option value="9">September - Peralihan</option>
+                                <option value="10">Oktober - Mulai Hujan</option>
+                                <option value="11">November - Musim Hujan</option>
+                                <option value="12">Desember - Musim Hujan</option>
+                            </select>
+                        </div>
+                        <small class="helper-text">Target waktu panen yang diharapkan</small>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="landArea">
+                            <span class="label-text">Luas Lahan (Ha)</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <input type="number" id="landArea" value="1.0" min="0.1" max="100" step="0.1">
+                            <span class="input-unit">Ha</span>
+                        </div>
+                        <small class="helper-text">Estimasi luas area penanaman</small>
+                    </div>
+                </div>
+
+                <div class="control-actions">
+                    <button id="predictBtn" class="btn-predict">
+                        <span class="btn-text">Hitung Prediksi</span>
+                    </button>
+                    <button id="resetBtn" class="btn-reset">
+                        <span class="btn-text">Reset</span>
+                    </button>
+                </div>
+
+                <div class="info-banner">
+                    <p>Model ARIMA akan memberikan prediksi yang lebih akurat dengan mempertimbangkan pola musiman dan tren historis</p>
+                </div>
+            </div>
+
+            <!-- Results Display -->
+            <div class="prediction-results">
+                <div class="result-card arima-result">
+                    <h3>Prediksi ARIMA</h3>
+                    <div class="result-value">
+                        <span class="value" id="arimaValue">5.75</span>
+                        <span class="unit">ton/ha</span>
+                    </div>
+                    <div class="confidence">
+                        <span>Confidence: </span>
+                        <span class="confidence-bar">
+                            <span class="confidence-fill arima-fill"></span>
+                        </span>
+                        <span id="arimaConfidence">92%</span>
+                    </div>
+                </div>
+
+                <div class="result-card regression-result">
+                    <h3>Prediksi Regresi</h3>
+                    <div class="result-value">
+                        <span class="value" id="regressionValue">5.45</span>
+                        <span class="unit">ton/ha</span>
+                    </div>
+                    <div class="confidence">
+                        <span>Confidence: </span>
+                        <span class="confidence-bar">
+                            <span class="confidence-fill regression-fill"></span>
+                        </span>
+                        <span id="regressionConfidence">78%</span>
+                    </div>
+                </div>
+
+                <div class="result-card comparison-result">
+                    <h3>Perbandingan</h3>
+                    <div class="comparison-info">
+                        <p><strong>Selisih:</strong> <span id="difference">0.30</span> ton/ha</p>
+                        <p><strong>Model Terbaik:</strong> <span id="bestModel">ARIMA</span></p>
+                        <p><strong>Akurasi Relatif:</strong> <span id="accuracy">+15%</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart Visualization -->
+            <div class="chart-container">
+                <canvas id="predictionChart"></canvas>
+            </div>
+
+            <!-- Historical Comparison -->
+            <div class="historical-section">
+                <h3>Performa Historis Model</h3>
+                <div class="historical-grid">
+                    <div class="historical-card">
+                        <h4>Rata-rata Error (MAPE)</h4>
+                        <canvas id="mapeChart"></canvas>
+                    </div>
+                    <div class="historical-card">
+                        <h4>R² Score Comparison</h4>
+                        <canvas id="r2Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="conclusion">
+        <div class="container">
+            <h2 class="section-title">Kesimpulan</h2>
+            <div class="conclusion-content">
+                <p class="conclusion-text">
+                    Berdasarkan analisis komprehensif terhadap 5,000+ lahan selama periode 2021-2025, 
+                    <strong>ARIMA berbasis DAX terbukti lebih akurat</strong> dalam memprediksi hasil panen jagung 
+                    dibandingkan regresi linear tradisional. Dengan R² score 0.85-0.92 vs 0.75-0.82 dan MAPE 5-8% vs 8-12%, 
+                    ARIMA memberikan prediksi yang lebih reliable, terutama untuk data dengan pola musiman yang kompleks.
+                </p>
+                <p class="conclusion-text">
+                    Namun, regresi linear tetap memiliki nilai untuk analisis eksploratif awal dan situasi dengan 
+                    tren yang sangat linear. Rekomendasi: gunakan ARIMA untuk production forecasting dan 
+                    decision-making, sementara regresi linear untuk quick insights dan baseline comparison.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <p class="section-subtitle">Punya pertanyaan atau ingin berkolaborasi?</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>cornfit2025@gmail.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📱</div>
+                        <h3>Telepon</h3>
+                        <p>081413514100</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">👥</div>
+                        <h3>Tim</h3>
+                        <p>Kelompok 7 TIK K1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-cornfit">
+        <div class="footer-content-wrapper">
+            <div class="footer-column footer-brand">
+                <div class="footer-logo">CornFit</div>
+                <p class="footer-description">
+                    Platform analitik hasil panen jagung berbasis AI dan data science.
+                </p>
+                <p class="footer-group-info">
+                    Kelompok 7 TIK K1 Tahun 2025
+                </p>
+                <p class="footer-team">
+                    Tim Pembuat: Nayla, Tiara, Gabriell
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Kontak</h3>
+                <ul class="footer-contact-list">
+                    <li>Email: cornfit2025@gmail.com</li>
+                    <li>Tel: 081413514100</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Link Cepat</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#information">Informasi</a></li>
+                    <li><a href="#analytics">Analitik</a></li>
+                    <li><a href="#model">Model</a></li>
+                    <li><a href="#interactive">Simulasi</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            &copy; <span id="copyright-year">2025</span> CornFit. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
